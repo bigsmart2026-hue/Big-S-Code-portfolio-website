@@ -1,0 +1,84 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Length 1242 >>
+stream
+BT
+/F1 30 Tf
+72 730 Td
+(BIG S-CODE) Tj
+/F2 14 Tf
+0 -26 Td
+(Front-End Engineer - Creative Technologist) Tj
+/F1 12 Tf
+0 -40 Td
+(hello@bigscode.dev  |  github.com/bigscode  |  Remote - Worldwide) Tj
+0 -30 Td
+(SUMMARY) Tj
+/F2 11 Tf
+0 -20 Td
+(Front-End Engineer crafting fast, accessible and thoughtfully engineered digital products.) Tj
+0 -18 Td
+(Expertise across HTML, Tailwind CSS, JavaScript, React and Firebase.) Tj
+0 -30 Td
+(PROJECTS) Tj
+/F2 11 Tf
+0 -20 Td
+(SoundSwipe - social music discovery, Firebase real-time rooms) Tj
+0 -18 Td
+(Student Registration Platform - multi-step enrollment, role-based dashboards) Tj
+0 -18 Td
+(Farm Management System - offline-first Firestore dashboards) Tj
+0 -18 Td
+(Repair Inventory System - job-centric stock tracking) Tj
+0 -18 Td
+(LogiMove - live fleet and shipment analytics) Tj
+0 -18 Td
+(Crypto Dashboard - streaming market data, canvas charts) Tj
+0 -30 Td
+(EXPERIENCE) Tj
+/F2 11 Tf
+0 -20 Td
+(Front-End Engineer - Freelance (2024 - Present)) Tj
+0 -18 Td
+(Front-End Developer - Product Studio (2023 - 2024)) Tj
+0 -18 Td
+(UI Developer - Creative Agency (2022 - 2023)) Tj
+0 -18 Td
+(Junior Web Developer - Startup (2021 - 2022)) Tj
+0 -30 Td
+(STATUS) Tj
+/F2 11 Tf
+0 -20 Td
+(Available for opportunities.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000251 00000 n
+0000000326 00000 n
+0000001690 00000 n
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1690
+%%EOF

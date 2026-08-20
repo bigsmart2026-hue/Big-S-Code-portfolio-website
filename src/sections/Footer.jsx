@@ -21,7 +21,7 @@ export default function Footer() {
             aria-label="Back to top"
           >
             <img src={logo} alt="" className="h-7 w-7 rounded-lg object-cover" />
-            big s-code<span className="animate-blink">_</span>
+            Big S-Code<span className="animate-blink">_</span>
           </button>
 
           <div className="flex gap-3">

@@ -106,9 +106,6 @@ export default function Hero() {
                 Contact Me
               </Button>
             </MagneticButton>
-            <Button size="lg" variant="ghost" href="/resume.pdf" download>
-              Download Resume
-            </Button>
           </motion.div>
         </motion.div>
 

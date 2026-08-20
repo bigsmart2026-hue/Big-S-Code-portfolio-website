@@ -40,130 +40,124 @@ export default function Navbar() {
     return () => observer.disconnect()
   }, [setActiveSection])
 
-  useEffect(() => {
-    document.body.style.overflow = mobileMenuOpen ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [mobileMenuOpen])
-
   const go = (id) => {
     closeMenu()
     scrollToId(id)
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-ink/70 backdrop-blur-xl">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <button
-          onClick={() => go('home')}
-          className="group flex items-center gap-2.5 font-mono text-sm font-semibold text-mint"
-          aria-label="Back to top"
-        >
-          <img src={logo} alt="" className="h-7 w-7 rounded-lg object-cover" />
-          <span className="hidden sm:inline">Big S-Code</span>
-          <span className="hidden animate-blink sm:inline">_</span>
-        </button>
-
-        <ul className="hidden items-center gap-1 lg:flex">
-          {links.map((link) => {
-            const active = activeSection === link.id
-            return (
-              <li key={link.id} className="relative">
-                <button
-                  onClick={() => go(link.id)}
-                  className={cn(
-                    'rounded-lg px-3.5 py-2 font-mono text-sm transition-colors duration-300',
-                    active ? 'text-mint' : 'text-moss hover:text-bone',
-                  )}
-                >
-                  {link.label}
-                </button>
-                {active && (
-                  <motion.span
-                    layoutId="nav-active"
-                    className="absolute inset-x-3 -bottom-0.5 h-px bg-mint"
-                  />
-                )}
-              </li>
-            )
-          })}
-        </ul>
-
-        <div className="flex items-center gap-3">
-          <ThemeToggle />
-          <Button href="/resume.pdf" download variant="outline" size="sm" className="hidden md:inline-flex">
-            resume.pdf
-          </Button>
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-ink/70 backdrop-blur-xl">
+        <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
           <button
-            onClick={openMenu}
-            aria-label="Open menu"
-            aria-expanded={mobileMenuOpen}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-line-bright text-bone lg:hidden"
+            onClick={() => go('home')}
+            className="group flex items-center gap-2.5 font-mono text-sm font-semibold text-mint"
+            aria-label="Back to top"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-            </svg>
+            <img src={logo} alt="" className="h-7 w-7 rounded-lg object-cover" />
+            <span className="hidden sm:inline">Big S-Code</span>
+            <span className="hidden animate-blink sm:inline">_</span>
           </button>
-        </div>
-      </nav>
+
+          <ul className="hidden items-center gap-1 lg:flex">
+            {links.map((link) => {
+              const active = activeSection === link.id
+              return (
+                <li key={link.id} className="relative">
+                  <button
+                    onClick={() => go(link.id)}
+                    className={cn(
+                      'rounded-lg px-3.5 py-2 font-mono text-sm transition-colors duration-300',
+                      active ? 'text-mint' : 'text-moss hover:text-bone',
+                    )}
+                  >
+                    {link.label}
+                  </button>
+                  {active && (
+                    <motion.span
+                      layoutId="nav-active"
+                      className="absolute inset-x-3 -bottom-0.5 h-px bg-mint"
+                    />
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Button href="/resume.pdf" download variant="outline" size="sm" className="hidden md:inline-flex">
+              resume.pdf
+            </Button>
+            <button
+              onClick={openMenu}
+              aria-label="Open menu"
+              aria-expanded={mobileMenuOpen}
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-line-bright text-bone lg:hidden"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
 
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-0 flex flex-col bg-ink/95 backdrop-blur-xl"
+            initial={{ opacity: 0, y: -8, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.98 }}
+            transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed left-3 right-3 top-[4.25rem] z-[60] max-h-[70vh] overflow-y-auto rounded-2xl border border-line bg-panel p-3 shadow-[0_24px_64px_-24px_rgba(0,0,0,0.5)] sm:left-auto sm:right-4 sm:w-72"
           >
-            <div className="flex h-16 items-center justify-end px-5">
+            <div className="flex items-center justify-between px-2 pb-2">
+              <p className="font-mono text-xs text-moss">
+                <span className="text-mint">$</span> menu
+              </p>
               <button
                 onClick={closeMenu}
                 aria-label="Close menu"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-line-bright text-bone"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-line-bright text-moss transition-colors hover:text-bone"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                 </svg>
               </button>
             </div>
-            <ul className="flex flex-1 flex-col items-center justify-center gap-2 px-8">
+            <ul className="flex flex-col gap-0.5">
               {links.map((link, i) => (
                 <motion.li
                   key={link.id}
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 12 }}
-                  transition={{ delay: 0.06 * i, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ delay: 0.04 * i, duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <button
                     onClick={() => go(link.id)}
                     className={cn(
-                      'py-2 font-mono text-3xl font-semibold tracking-tight transition-colors',
-                      activeSection === link.id ? 'text-mint' : 'text-bone hover:text-mint',
+                      'flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left font-mono text-sm transition-colors',
+                      activeSection === link.id
+                        ? 'bg-mint/10 text-mint'
+                        : 'text-moss hover:bg-raised hover:text-bone',
                     )}
                   >
-                    <span className="mr-3 text-mint">0{i + 1}</span>
-                    {link.label}
+                    <span>{link.label}</span>
+                    <span className="text-xs text-moss">0{i + 1}</span>
                   </button>
                 </motion.li>
               ))}
-              <motion.li
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ delay: 0.5, duration: 0.4 }}
-                className="mt-6"
-              >
-                <Button href="/resume.pdf" download>
-                  download resume.pdf
-                </Button>
-              </motion.li>
             </ul>
+            <div className="mt-2 border-t border-line pt-3">
+              <Button href="/resume.pdf" download size="sm" className="w-full">
+                download resume.pdf
+              </Button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   )
 }

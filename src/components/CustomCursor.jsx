@@ -15,7 +15,6 @@ export default function CustomCursor() {
   const ringY = useSpring(y, { stiffness: 260, damping: 24, mass: 0.4 })
 
   useEffect(() => {
-    if (!finePointer) return
     let raf = 0
     const loop = () => {
       raf = requestAnimationFrame(loop)
@@ -24,10 +23,9 @@ export default function CustomCursor() {
     }
     loop()
     return () => cancelAnimationFrame(raf)
-  }, [finePointer, pos, x, y])
+  }, [pos, x, y])
 
   useEffect(() => {
-    if (!finePointer) return
     const setVariant = useCursorStore.getState().setVariant
     const onOver = (e) => {
       const target = e.target.closest('a, button, input, textarea, [role="button"], [data-hover]')
@@ -39,14 +37,12 @@ export default function CustomCursor() {
     }
     window.addEventListener('mouseover', onOver, { passive: true })
     return () => window.removeEventListener('mouseover', onOver)
-  }, [finePointer])
+  }, [])
 
   useEffect(() => {
     document.body.classList.toggle('cursor-custom', finePointer)
     return () => document.body.classList.remove('cursor-custom')
   }, [finePointer])
-
-  if (!finePointer) return null
 
   const ringClass =
     variant === 'hover'

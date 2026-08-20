@@ -5,15 +5,18 @@ export function useMousePosition() {
 
   useEffect(() => {
     let raf = 0
-    const onMove = (e) => {
+    const set = (x, y) => {
       cancelAnimationFrame(raf)
       raf = requestAnimationFrame(() => {
-        ref.current = { x: e.clientX, y: e.clientY }
+        ref.current = { x, y }
       })
     }
-    window.addEventListener('mousemove', onMove, { passive: true })
+    const onMove = (e) => set(e.clientX, e.clientY)
+    window.addEventListener('pointermove', onMove, { passive: true })
+    window.addEventListener('pointerdown', onMove, { passive: true })
     return () => {
-      window.removeEventListener('mousemove', onMove)
+      window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('pointerdown', onMove)
       cancelAnimationFrame(raf)
     }
   }, [])

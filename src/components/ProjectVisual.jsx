@@ -37,24 +37,37 @@ export default function ProjectVisual({ project, className = '' }) {
         <span className="font-mono text-[11px] text-moss">{project.id}.dev</span>
       </div>
 
-      <div className="flex aspect-[16/10] items-center justify-center p-6">
-        <div
-          className="flex h-24 w-24 items-center justify-center rounded-2xl border border-line bg-panel/80 text-5xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]"
-          style={{ color: palette.glow, textShadow: `0 0 28px color-mix(in srgb, ${palette.glow} 70%, transparent)` }}
-        >
-          {palette.glyph}
+      {project.image ? (
+        <div className="flex aspect-[16/10] items-stretch overflow-hidden">
+          <img
+            src={project.image}
+            alt={`${project.title} screenshot`}
+            loading="lazy"
+            className="h-full w-full object-cover object-top"
+          />
         </div>
-      </div>
+      ) : (
+        <div className="flex aspect-[16/10] items-center justify-center p-6">
+          <div
+            className="flex h-24 w-24 items-center justify-center rounded-2xl border border-line bg-panel/80 text-5xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]"
+            style={{ color: palette.glow, textShadow: `0 0 28px color-mix(in srgb, ${palette.glow} 70%, transparent)` }}
+          >
+            {palette.glyph}
+          </div>
+        </div>
+      )}
 
-      <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-5">
-        <div>
-          <p className="font-mono text-[11px] text-moss">
-            <span className="text-mint">{project.index}</span> / {project.title}
-          </p>
-          <p className="mt-1 font-mono text-xs text-moss">{project.tech.join(' · ')}</p>
+      {!project.image && (
+        <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-5">
+          <div>
+            <p className="font-mono text-[11px] text-moss">
+              <span className="text-mint">{project.index}</span> / {project.title}
+            </p>
+            <p className="mt-1 font-mono text-xs text-moss">{project.tech.join(' · ')}</p>
+          </div>
+          <span className="font-mono text-[11px] text-moss">{project.year}</span>
         </div>
-        <span className="font-mono text-[11px] text-moss">{project.year}</span>
-      </div>
+      )}
     </div>
   )
 }

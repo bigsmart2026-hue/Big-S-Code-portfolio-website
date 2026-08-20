@@ -1,12 +1,13 @@
+import { WhatsAppIcon, GitHubIcon, GmailIcon, LinkedInIcon } from '../components/icons'
 import { site } from '../data/site'
 import { scrollToId } from '../utils/scroll'
 import logo from '../assets/logo.png'
 
 const socials = [
-  { label: 'github', href: site.socials.github },
-  { label: 'linkedin', href: site.socials.linkedin },
-  { label: 'x', href: site.socials.x },
-  { label: 'bluesky', href: site.socials.bluesky },
+  { label: site.socials.whatsapp.label, href: site.socials.whatsapp.href, Icon: WhatsAppIcon },
+  { label: site.socials.github.label, href: site.socials.github.href, Icon: GitHubIcon },
+  { label: site.socials.email.label, href: site.socials.email.href, Icon: GmailIcon },
+  { label: site.socials.linkedin.label, href: site.socials.linkedin.href, Icon: LinkedInIcon },
 ]
 
 export default function Footer() {
@@ -31,9 +32,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={s.label}
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-line-bright font-mono text-xs text-moss transition-all hover:-translate-y-0.5 hover:border-mint hover:text-mint"
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-line-bright text-moss transition-all hover:-translate-y-0.5 hover:border-mint hover:text-mint"
               >
-                {s.label.slice(0, 1).toUpperCase()}
+                <s.Icon size={16} aria-hidden />
               </a>
             ))}
           </div>

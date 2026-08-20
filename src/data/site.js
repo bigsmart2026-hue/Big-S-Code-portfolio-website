@@ -10,11 +10,13 @@ export const site = {
   location: 'Remote · Worldwide',
   resume: '/resume.pdf',
   socials: {
-    github: 'https://github.com/bigscode',
-    linkedin: 'https://linkedin.com/in/bigscode',
-    x: 'https://x.com/bigscode',
-    bluesky: 'https://bsky.app/profile/bigscode.bsky.social',
-    discord: 'https://discord.com/users/bigscode',
+    whatsapp: { label: 'WhatsApp', href: 'https://wa.me/2348105129405' },
+    github: { label: 'GitHub', href: 'https://github.com/bigsmart2026-hue' },
+    email: { label: 'Email', href: 'mailto:bigsmart2026@gmail.com' },
+    linkedin: {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/victor-tochukwu-a71a223aa',
+    },
   },
   stats: [
     { value: 12, suffix: '+', label: 'Projects shipped' },

@@ -1,5 +1,7 @@
+import { WhatsAppIcon, GitHubIcon, GmailIcon, LinkedInIcon } from '../components/icons'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
@@ -9,6 +11,7 @@ import SectionLabel from '../components/SectionLabel'
 import MagneticButton from '../components/MagneticButton'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { site } from '../data/site'
+import { db } from '../lib/firebase'
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -41,27 +44,37 @@ export default function Contact() {
     if (!validate()) return
     setSending(true)
 
-    const message = `${form.message}\n\n— ${form.name} (${form.email})`
     try {
-      navigator.clipboard.writeText(message)
-    } catch {}
+      await addDoc(collection(db, 'messages'), {
+        name: form.name.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+        createdAt: serverTimestamp(),
+      })
+      setForm({ name: '', email: '', message: '' })
+      setSnack({ severity: 'success', text: 'Message sent — I usually reply within 24h' })
+    } catch {
+      const message = `${form.message}\n\n— ${form.name} (${form.email})`
+      try {
+        navigator.clipboard.writeText(message)
+      } catch {}
 
-    await new Promise((resolve) => setTimeout(resolve, 900))
+      const subject = encodeURIComponent(`Portfolio message from ${form.name}`)
+      const body = encodeURIComponent(message)
+      window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
 
-    const subject = encodeURIComponent(`Portfolio message from ${form.name}`)
-    const body = encodeURIComponent(message)
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
-
-    setSending(false)
-    setForm({ name: '', email: '', message: '' })
-    setSnack({ severity: 'success', text: 'Message drafted — check your mail client' })
+      setForm({ name: '', email: '', message: '' })
+      setSnack({ severity: 'info', text: 'Firestore unavailable — opened your mail client' })
+    } finally {
+      setSending(false)
+    }
   }
 
   const socialLinks = [
-    { label: 'github', href: site.socials.github },
-    { label: 'linkedin', href: site.socials.linkedin },
-    { label: 'x', href: site.socials.x },
-    { label: 'bluesky', href: site.socials.bluesky },
+    { label: site.socials.whatsapp.label, href: site.socials.whatsapp.href, Icon: WhatsAppIcon },
+    { label: site.socials.github.label, href: site.socials.github.href, Icon: GitHubIcon },
+    { label: site.socials.email.label, href: site.socials.email.href, Icon: GmailIcon },
+    { label: site.socials.linkedin.label, href: site.socials.linkedin.href, Icon: LinkedInIcon },
   ]
 
   return (
@@ -132,9 +145,9 @@ export default function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={s.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-line-bright font-mono text-xs text-moss transition-all hover:-translate-y-0.5 hover:border-mint hover:text-mint"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-line-bright text-moss transition-all hover:-translate-y-0.5 hover:border-mint hover:text-mint"
                 >
-                  {s.label.slice(0, 1).toUpperCase()}
+                  <s.Icon size={16} aria-hidden />
                 </a>
               ))}
             </div>

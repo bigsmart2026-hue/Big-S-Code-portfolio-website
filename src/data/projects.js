@@ -1,3 +1,5 @@
+import logimoveImg from '../assets/logimove.jpg'
+
 export const projects = [
   {
     id: 'soundswipe',
@@ -112,6 +114,7 @@ export const projects = [
     description:
       'Fleet and shipment tracking dashboard with live maps, route analytics and driver performance. Data that drives decisions.',
     visual: 'logistics',
+    image: logimoveImg,
     overview:
       'LogiMove puts every truck, route and shipment on one screen — live positions, ETA deltas and fleet-wide analytics that operations actually use.',
     problem:
@@ -127,7 +130,7 @@ export const projects = [
     outcome:
       'Dispatch response time halved and route efficiency reviews went from weekly meetings to a live screen.',
     tech: ['React', 'Firebase', 'Tailwind', 'Recharts'],
-    links: { github: 'https://github.com/bigscode/logimove', live: 'https://logimove.demo' },
+    links: { github: 'https://github.com/bigscode/logimove', live: 'https://logi-move-logistcs.vercel.app/' },
   },
   {
     id: 'crypto-dashboard',

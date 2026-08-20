@@ -1,4 +1,5 @@
 import logimoveImg from '../assets/logimove.jpg'
+import agribusinessImg from '../assets/agribusiness.jpg'
 
 export const projects = [
   {
@@ -56,12 +57,13 @@ export const projects = [
   {
     id: 'farm-system',
     index: '03',
-    title: 'Farm Management System',
+    title: ' AgriBusiness Website',
     year: '2025',
     tagline: 'A control room for modern agriculture.',
     description:
       'Dashboard for farms to track fields, yields, inventory and weather. Firestore-synced across devices — even offline in the field.',
     visual: 'farm',
+    image: agribusinessImg,
     overview:
       'FarmOS gives farm managers a live operational picture: field health, seasonal yield tracking, and stock levels — updated in real time from anywhere.',
     problem:
@@ -77,7 +79,7 @@ export const projects = [
     outcome:
       'Operational data that used to take a week to compile now assembles itself — and survives power outages in the field.',
     tech: ['React', 'Firestore', 'Tailwind', 'Recharts'],
-    links: { github: 'https://github.com/bigscode/farm-system', live: 'https://farm-system.demo' },
+    links: { github: 'https://github.com/bigscode/farm-system', live: 'https://agri-business-rust.vercel.app/' },
   },
   {
     id: 'repair-system',

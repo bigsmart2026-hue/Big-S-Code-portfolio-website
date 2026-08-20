@@ -55,8 +55,8 @@ export default function Navbar() {
             aria-label="Back to top"
           >
             <img src={logo} alt="" className="h-7 w-7 rounded-lg object-cover" />
-            <span className="hidden sm:inline">Big S-Code</span>
-            <span className="hidden animate-blink sm:inline">_</span>
+            <span>Big S-Code</span>
+            <span className="animate-blink">_</span>
           </button>
 
           <ul className="hidden items-center gap-1 lg:flex">

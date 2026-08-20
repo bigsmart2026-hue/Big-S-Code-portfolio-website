@@ -89,7 +89,7 @@ export default function About() {
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-moss">
             <p>
-              I'm {site.name} — a Front-End Engineer who treats the browser like a
+              I'm {site.fullName} ({site.name}) — a Front-End Engineer who treats the browser like a
               compiler. Every millisecond, every repaint, every line of CSS counts.
             </p>
             <p>

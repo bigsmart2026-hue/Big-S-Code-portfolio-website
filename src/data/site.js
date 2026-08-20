@@ -1,5 +1,6 @@
 export const site = {
   name: 'Big S-Code',
+  fullName: 'Onuoha Tochukwu Victor',
   role: 'Front-End Engineer',
   roleAlt: 'Creative Technologist',
   tagline: 'Engineering × Design × Product Thinking',

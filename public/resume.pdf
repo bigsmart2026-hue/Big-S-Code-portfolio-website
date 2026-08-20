@@ -6,7 +6,7 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
 endobj
 4 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
@@ -15,70 +15,119 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 6 0 obj
-<< /Length 1242 >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+7 0 obj
+<< /Length 2340 >>
 stream
 BT
-/F1 30 Tf
-72 730 Td
-(BIG S-CODE) Tj
-/F2 14 Tf
-0 -26 Td
-(Front-End Engineer - Creative Technologist) Tj
+/F1 26 Tf
+72 748 Td
+(ONUOHA TOCHUKWU VICTOR) Tj
+/F2 13 Tf
+0 -22 Td
+(Big S-Code  |  Front-End Engineer & Creative Technologist) Tj
+/F3 10 Tf
+0 -34 Td
+(bigsmart2026@gmail.com  |  +234 810 512 9405  |  Remote - Worldwide) Tj
+/F3 10 Tf
+0 -16 Td
+(github.com/bigsmart2026-hue  |  linkedin.com/in/victor-tochukwu-a71a223aa) Tj
 /F1 12 Tf
-0 -40 Td
-(hello@bigscode.dev  |  github.com/bigscode  |  Remote - Worldwide) Tj
+0 -36 Td
+(PROFESSIONAL SUMMARY) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Front-End Engineer with 7 months of hands-on experience shipping real products with React,) Tj
+0 -14 Td
+(Tailwind CSS, JavaScript and Firebase. Treats the browser like a compiler - fast, accessible,) Tj
+0 -14 Td
+(and thoughtfully engineered interfaces. Comfortable owning the full frontend, from first) Tj
+0 -14 Td
+(sketch to deployed release.)
+/F1 12 Tf
 0 -30 Td
-(SUMMARY) Tj
-/F2 11 Tf
-0 -20 Td
-(Front-End Engineer crafting fast, accessible and thoughtfully engineered digital products.) Tj
+(CORE SKILLS) Tj
+/F2 10.5 Tf
 0 -18 Td
-(Expertise across HTML, Tailwind CSS, JavaScript, React and Firebase.) Tj
-0 -30 Td
-(PROJECTS) Tj
-/F2 11 Tf
-0 -20 Td
-(SoundSwipe - social music discovery, Firebase real-time rooms) Tj
-0 -18 Td
-(Student Registration Platform - multi-step enrollment, role-based dashboards) Tj
-0 -18 Td
-(Farm Management System - offline-first Firestore dashboards) Tj
-0 -18 Td
-(Repair Inventory System - job-centric stock tracking) Tj
-0 -18 Td
-(LogiMove - live fleet and shipment analytics) Tj
-0 -18 Td
-(Crypto Dashboard - streaming market data, canvas charts) Tj
+(React  |  JavaScript  |  Tailwind CSS  |  HTML/CSS  |  Firebase & Firestore  |  Zustand) Tj
+0 -14 Td
+(REST APIs  |  Git  |  Vite  |  UI/UX  |  Responsive Design)
+/F1 12 Tf
 0 -30 Td
 (EXPERIENCE) Tj
 /F2 11 Tf
 0 -20 Td
-(Front-End Engineer - Freelance (2024 - Present)) Tj
+(Front-End Engineer - Freelance - Independent) Tj
+/F3 10 Tf
+0 -14 Td
+(Feb 2026 - Present)
+/F2 10.5 Tf
+0 -16 Td
+(- Ship full frontends for clients: Firebase backends, real-time features, pixel-perfect UI)
+/F2 11 Tf
 0 -18 Td
-(Front-End Developer - Product Studio (2023 - 2024)) Tj
-0 -18 Td
-(UI Developer - Creative Agency (2022 - 2023)) Tj
-0 -18 Td
-(Junior Web Developer - Startup (2021 - 2022)) Tj
-0 -30 Td
-(STATUS) Tj
+(Front-End Developer - Early Client Projects - Intensive) Tj
+/F3 10 Tf
+0 -14 Td
+(Jan 2026 - Feb 2026)
+/F2 10.5 Tf
+0 -16 Td
+(- Built a fast foundation: modern JavaScript, component architecture, shipped products)
+/F1 12 Tf
+0 -28 Td
+(PROJECTS) Tj
 /F2 11 Tf
 0 -20 Td
-(Available for opportunities.) Tj
+(AbiaWay Smart Transit - capstone with team Byte Builders) Tj
+/F3 10 Tf
+0 -14 Td
+(Real-time bus tracking, digital wallet and route booking - abiaway-transit.web.app)
+/F2 11 Tf
+0 -18 Td
+(Apex Quiz) Tj
+/F3 10 Tf
+0 -14 Td
+(Interactive trivia with live Firestore leaderboard - apex-quiz-2e25e.web.app)
+/F2 11 Tf
+0 -18 Td
+(Zustand To-Do App) Tj
+/F3 10 Tf
+0 -14 Td
+(State management showcase with persist and drag-and-drop - zustand-to-do-app.web.app)
+/F2 11 Tf
+0 -18 Td
+(LogiMove) Tj
+/F3 10 Tf
+0 -14 Td
+(Fleet and shipment analytics dashboard - logi-move-logistcs.vercel.app)
+/F2 11 Tf
+0 -18 Td
+(AgriBusiness) Tj
+/F3 10 Tf
+0 -14 Td
+(Farm management system, offline-first Firestore - agri-business-rust.vercel.app)
+/F1 12 Tf
+0 -30 Td
+(STATUS) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Available for freelance projects and full-time roles. Replies within 24 hours.)
 ET
 endstream
 endobj
 xref
-0 6
+0 7
 0000000000 65535 f
 0000000009 00000 n
 0000000058 00000 n
 0000000115 00000 n
-0000000251 00000 n
-0000000326 00000 n
-0000001690 00000 n
+0000000261 00000 n
+0000000336 00000 n
+0000000406 00000 n
+0000002866 00000 n
 trailer
-<< /Size 6 /Root 1 0 R >>
+<< /Size 7 /Root 1 0 R >>
 startxref
-1690
+2866
 %%EOF

@@ -1,32 +1,34 @@
 import logimoveImg from '../assets/logimove.jpg'
 import agribusinessImg from '../assets/agribusiness.jpg'
+import apexquizImg from '../assets/apexquiz.jpg'
 
 export const projects = [
   {
-    id: 'soundswipe',
+    id: 'apex-quiz',
     index: '01',
-    title: 'SoundSwipe',
+    title: 'Apex Quiz',
     year: '2026',
-    tagline: 'Music discovery redesigned as a social listening experience.',
+    tagline: 'Interactive trivia, ranked live.',
     description:
-      'A swiping-based music discovery app where taste becomes a conversation. Real-time listening rooms, shared queues, and taste-matching — all live, all social.',
-    visual: 'audio',
+      'An interactive quiz webapp — timed questions, streaks and a live leaderboard that updates as players answer. Play solo or battle friends in real time.',
+    visual: 'forms',
+    image: apexquizImg,
     overview:
-      'SoundSwipe turns passive streaming into an active social ritual. Users swipe through tracks like they do photos, building a taste profile that powers shared listening rooms with friends.',
+      'Apex Quiz is a fast, competitive trivia webapp. Questions rotate on a timer, answers lock in instantly, and the leaderboard repaints live as scores land.',
     problem:
-      'Music platforms are vast but lonely. Discovery is algorithmic isolation — playlists are consumed alone, and there is no native way to listen with people in real time.',
+      'Trivia night was trapped in group chats: manual scoring, no pacing, and the scoreboard only ever existed on a napkin.',
     solution:
-      'A gesture-driven discovery feed synced to Firestore, plus collaborative listening rooms with live queue voting. Taste profiles make every room feel personal.',
+      'A real-time quiz engine on Firebase — timed question rotation, answer locking, streak tracking, and a leaderboard fed by Firestore listeners.',
     engineering: [
-      'Gesture detection with touch events + rAF-throttled rendering — 60fps swipe feedback',
-      'Firestore real-time listeners with offline persistence for rooms and queues',
-      'Presence tracking via Firestore presence sessions for live member indicators',
-      'Optimistic UI updates for votes and skips, reconciled on reconnect',
+      'Timed question flow with answer locking and instant streak tracking',
+      'Live leaderboard driven by Firestore listeners — rankings update as answers land',
+      'Session state machine (lobby → question → results) with safe transitions',
+      'Keyboard-first play with reduced-motion support for accessibility',
     ],
     outcome:
-      'A demo that feels like a shipped product: sub-100ms interactions, zero jank during swipes, and a listening session that stays perfectly in sync across clients.',
-    tech: ['JavaScript', 'Firebase', 'Firestore', 'UI/UX'],
-    links: { github: 'https://github.com/bigscode/soundswipe', live: 'https://soundswipe.demo' },
+      'Rounds run themselves: questions, scoring and the ranking screen update live with zero reloads — and every game is replayable.',
+    tech: ['React', 'Firebase', 'Firestore', 'Tailwind'],
+    links: { github: 'https://github.com/bigscode/apex-quiz', live: 'https://apex-quiz-2e25e.web.app' },
   },
   {
     id: 'student-platform',

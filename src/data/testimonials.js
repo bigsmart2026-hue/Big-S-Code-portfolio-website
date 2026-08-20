@@ -3,7 +3,7 @@ export const testimonials = [
     quote:
       'Big S-Code shipped our entire frontend in half the estimated time — and it looked better than the mockups. Hiring again without hesitation.',
     name: 'Ada Lovelace',
-    role: 'Product Lead, SoundSwipe',
+    role: 'Product Lead, Apex Quiz',
     initials: 'AL',
   },
   {

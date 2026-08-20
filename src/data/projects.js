@@ -62,7 +62,7 @@ export const projects = [
     id: 'farm-system',
     index: '03',
     title: ' AgriBusiness Website',
-    year: '2025',
+    year: '2026',
     tagline: 'A control room for modern agriculture.',
     description:
       'Dashboard for farms to track fields, yields, inventory and weather. Firestore-synced across devices — even offline in the field.',
@@ -116,7 +116,7 @@ export const projects = [
     id: 'logimove',
     index: '05',
     title: 'LogiMove',
-    year: '2024',
+    year: '2026',
     tagline: 'Logistics, visualized.',
     description:
       'Fleet and shipment tracking dashboard with live maps, route analytics and driver performance. Data that drives decisions.',

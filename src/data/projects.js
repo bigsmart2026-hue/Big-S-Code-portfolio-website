@@ -2,6 +2,7 @@ import logimoveImg from '../assets/logimove.jpg'
 import agribusinessImg from '../assets/agribusiness.jpg'
 import apexquizImg from '../assets/apexquiz.jpg'
 import abiawayImg from '../assets/abiaway.jpg'
+import zustandtodoImg from '../assets/zustandtodo.jpg'
 
 export const projects = [
   {
@@ -85,30 +86,31 @@ export const projects = [
     links: { github: 'https://github.com/bigscode/farm-system', live: 'https://agri-business-rust.vercel.app/' },
   },
   {
-    id: 'repair-system',
+    id: 'zustand-todo',
     index: '04',
-    title: 'Repair Inventory System',
-    year: '2025',
-    tagline: 'Every part tracked. Every job accounted for.',
+    title: 'Zustand To-Do App',
+    year: '2026',
+    tagline: 'State management, proven in production.',
     description:
-      'Inventory and job tracking for repair shops: parts in, parts out, jobs open, jobs done. Barcode-first workflows with instant stock lookups.',
-    visual: 'repair',
+      'A task manager built to demonstrate Zustand in action — fast, predictable state with minimal boilerplate and instant UI updates.',
+    visual: 'forms',
+    image: zustandtodoImg,
     overview:
-      'A lean inventory system purpose-built for repair shops — stock that decrements on job close, low-stock alerts, and a parts history for every device.',
+      'A polished to-do webapp that showcases Zustand\u2019s store architecture: tasks, filters and preferences all live in small, composable stores with selector-based re-renders.',
     problem:
-      'Repair shops were over-ordering parts and losing track of what was inside which device. Job history was a pile of paper tickets.',
+      'Client state gets messy fast — props drilling, stale values and components re-rendering for data they do not use.',
     solution:
-      'A job-centric inventory model: parts are reserved when a job opens and committed when it closes. History is automatic, stock is always truthful.',
+      'Zustand stores split by concern, with scoped selectors so only the components that care re-render. Actions update state immutably, so UI stays in sync instantly.',
     engineering: [
-      'Transactional stock updates via Firestore batch writes to prevent double-commit',
-      'Barcode scanning hooks with instant product lookup',
-      'Low-stock alert engine with per-part reorder thresholds',
-      'Job timeline view reconstructing any device\u2019s full repair history',
+      'Zustand stores with sliced selectors to keep re-renders minimal',
+      'Persistent task list via the persist middleware (localStorage)',
+      'Optimistic add/toggle/delete with instant UI feedback',
+      'Drag-and-drop reordering wired into the store without prop drilling',
     ],
     outcome:
-      'Stock shrink cut dramatically; technicians now check a device\u2019s entire history in one screen instead of three binders.',
-    tech: ['React', 'Firebase', 'JavaScript', 'Tailwind'],
-    links: { github: 'https://github.com/bigscode/repair-system', live: 'https://repair-system.demo' },
+      'A to-do app that stays responsive with hundreds of tasks open — and a store layer clean enough to copy into any project.',
+    tech: ['React', 'Zustand', 'Tailwind', 'Vite'],
+    links: { github: 'https://github.com/bigscode/zustand-todo', live: 'https://zustand-to-do-app.web.app' },
   },
   {
     id: 'logimove',

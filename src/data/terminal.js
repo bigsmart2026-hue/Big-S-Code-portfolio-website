@@ -10,7 +10,7 @@ export const terminalCommands = {
   role: 'Front-End Engineer crafting fast, accessible digital products',
   stack: 'HTML · Tailwind · JavaScript · React · Firebase · UI/UX',
   status: 'Available for opportunities — open to new projects',
-  projects: 'Apex Quiz · Student Platform · Farm System · Repair System · LogiMove · AbiaWay',
+  projects: 'Apex Quiz · Student Platform · Farm System · Zustand To-Do · LogiMove · AbiaWay',
   contact: 'hello@bigscode.dev · github.com/bigscode',
   help: 'commands: whoami, role, stack, status, projects, contact, clear, help',
   clear: '',

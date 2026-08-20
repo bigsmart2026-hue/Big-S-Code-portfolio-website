@@ -42,8 +42,13 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!validate()) return
-    setSending(true)
 
+    const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`)
+    const subject = encodeURIComponent(`Portfolio message from ${form.name}`)
+    window.open(`${site.socials.whatsapp.href}?text=${body}`, '_blank', 'noopener')
+    window.location.href = `${site.socials.email.href}?subject=${subject}&body=${body}`
+
+    setSending(true)
     try {
       await addDoc(collection(db, 'messages'), {
         name: form.name.trim(),
@@ -51,23 +56,13 @@ export default function Contact() {
         message: form.message.trim(),
         createdAt: serverTimestamp(),
       })
-      setForm({ name: '', email: '', message: '' })
-      setSnack({ severity: 'success', text: 'Message sent — I usually reply within 24h' })
+      setSnack({ severity: 'success', text: 'WhatsApp & email opened — tap send there' })
     } catch {
-      const message = `${form.message}\n\n— ${form.name} (${form.email})`
-      try {
-        navigator.clipboard.writeText(message)
-      } catch {}
-
-      const subject = encodeURIComponent(`Portfolio message from ${form.name}`)
-      const body = encodeURIComponent(message)
-      window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
-
-      setForm({ name: '', email: '', message: '' })
-      setSnack({ severity: 'info', text: 'Firestore unavailable — opened your mail client' })
+      setSnack({ severity: 'info', text: 'Database offline — WhatsApp & email opened anyway' })
     } finally {
       setSending(false)
     }
+    setForm({ name: '', email: '', message: '' })
   }
 
   const socialLinks = [

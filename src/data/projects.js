@@ -1,6 +1,7 @@
 import logimoveImg from '../assets/logimove.jpg'
 import agribusinessImg from '../assets/agribusiness.jpg'
 import apexquizImg from '../assets/apexquiz.jpg'
+import abiawayImg from '../assets/abiaway.jpg'
 
 export const projects = [
   {
@@ -137,29 +138,31 @@ export const projects = [
     links: { github: 'https://github.com/bigscode/logimove', live: 'https://logi-move-logistcs.vercel.app/' },
   },
   {
-    id: 'crypto-dashboard',
+    id: 'abiaway',
     index: '06',
-    title: 'Crypto Dashboard',
-    year: '2024',
-    tagline: 'Markets at a glance, engineered for clarity.',
+    title: 'AbiaWay Smart Transit',
+    year: '2026',
+    tagline: 'Smart transit for Abia State.',
     description:
-      'Real-time portfolio and market dashboard with watchlists, price alerts and deep-dive charts. Heavy data, light interface.',
-    visual: 'crypto',
+      'Live bus tracking, digital wallet payments and route booking for Abia State\u2019s public transportation — built with team Byte Builders as a group capstone.',
+    visual: 'logistics',
+    image: abiawayImg,
     overview:
-      'A trading-adjacent dashboard built for clarity over noise: live prices, portfolio allocation, alert thresholds, and research-grade charts.',
+      'AbiaWay connects passengers, drivers and administrators through one ecosystem: real-time bus tracking on an interactive map, cashless digital wallet, route planning with seat booking, a driver dashboard with GPS navigation, and an AI travel assistant.',
     problem:
-      'Market dashboards are either toy demos or wall-street tools. Neither respects a retail trader\u2019s attention or connection budget.',
+      'Abia State\u2019s transit ran on manual schedules and cash-only payments. Passengers waited blind at stops, drivers had no route guidance, and operators had zero visibility into fleet operations — a recipe for long waits, revenue leakage and guesswork.',
     solution:
-      'A deliberately restrained interface with streaming prices, locally-computed indicators, and charts that render without stutter on mid-range devices.',
+      'A web app where passengers see live buses and ETAs, top up wallets and tap to pay, plan routes and book seats; drivers get trip management with live location sharing; administrators get fleet dashboards, payment analytics and route optimization — plus an AI assistant that answers route and fare questions.',
     engineering: [
-      'Streaming price updates batched and diffed to minimize re-renders',
-      'Canvas-based chart rendering with 60fps pan/zoom',
-      'Persistent watchlists and alert thresholds in localStorage + Firestore sync',
-      'Portfolio allocation computed client-side with memoized derivations',
+      'Leaflet/React-Leaflet map layer streaming live bus positions and ETAs',
+      'Digital wallet with top-up flows and tap-to-pay simulation, persisted server-side',
+      'Route planning and booking state machine with seat selection',
+      'Driver trip management (start/pause/end) with live capacity and GPS reporting',
+      'Fleet analytics views with passenger demand patterns for route optimization',
     ],
     outcome:
-      'A dashboard that loads in under a second and stays smooth while 60 prices update per second.',
-    tech: ['React', 'Firebase', 'Tailwind', 'Canvas'],
-    links: { github: 'https://github.com/bigscode/crypto-dashboard', live: 'https://crypto-dashboard.demo' },
+      'A capstone MVP that covers the full passenger journey — track, plan, book, pay, board — with 1,000+ registered users, 50+ tracked buses and sub-2-second queries as the success bar.',
+    tech: ['React', 'Leaflet', 'Firebase', 'Tailwind'],
+    links: { github: 'https://github.com/bigsmart2026-hue/abiaway', live: 'https://abiaway-transit.web.app/' },
   },
 ]
